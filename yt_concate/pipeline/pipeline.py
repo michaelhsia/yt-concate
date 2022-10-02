@@ -9,7 +9,7 @@ class Pipeline:
         data = None
         for step in self.steps:
             try:
-                data = step.process(data, inputs, utils)
+                data = step.process(data, inputs, utils) # 把step裡的各個步驟都執行process這個method
             except StepException as e:
                 print('Exception happened:', e)
                 break
